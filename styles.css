@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgba(191, 64, 0, 0.447);
+}
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    font-size: large;
+}
+
+#rainbowCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none; /* Allow clicks to pass through the canvas */
+    z-index: -1;
+}
+
+.header-right ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px; /* Space between items */
+    color: rgb(255, 255, 255);
+    font-size: larger;
+}
+
+.header-right ul li {
+    border-radius: 10%;
+    background-color: rgb(45, 0, 191);
+    padding: 7px;
+}
+
+.header-right li, .header-left {
+    cursor: pointer;
+}
+
+.header-left {
+    color: white;
+    font-size: x-large;
+    z-index: 60;
+    margin-left: 4;
+}
+
+.dim-header-left {
+    position: absolute;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    z-index: 50;
+    width: 300px;
+    height: 100%;
+    left: 0;
+}
+
+main {
+    padding: 20px;
+    height: 2000px; /* Just to create a scrollable page */
+}
+
+article {
+    width: 60vw;
+    margin-left: 20vw;
+}
+
+.left-nav {
+    width: 15vw;
+    height: 50vh;
+    background: linear-gradient(to bottom right, rgba(191, 0, 255, 0.584) 0%, rgba(9,9,121,1) 90%, rgba(2,0,36,1) 100%);
+    background-size: 400% 400%; /* For animation */
+    animation: gradientAnimation 15s ease infinite; /* Animation */
+    position: fixed;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 3%;
+}
